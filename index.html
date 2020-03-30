@@ -103,7 +103,11 @@
             <div class="col">
 
               <div class="card">
-              <div style="opacity: 0.5; background-color: #4CAF50; height: 200px"></div>
+              <div style="opacity: 0.5; background-color: #15bb1c; height: 200px">
+                <button type="button" class="btn btn-success-outline _btn-modal" data-toggle="modal" data-target="#exampleModal">
+                Click to read
+            </button>
+              </div>
                 <div class="card-body">
     <h5 class="card-title">Annual Report</h5>
     <p class="card-text">By Lailah G</p>
@@ -113,7 +117,11 @@
 
             <div class="col">
               <div class="card">
-              <div style="opacity: 0.5; background-color: #4CAF50; height: 200px"></div>
+              <div style="opacity: 0.5; background-color: #15bb1c; height: 200px">
+                <button type="button" class="btn btn-success-outline _btn-modal" data-toggle="modal" data-target="#exampleModal">
+                Click to read
+            </button>
+              </div>
               <div class="card-body">
     <h5 class="card-title">Leather Report</h5>
     <p class="card-text">By Lailah G</p>
@@ -123,7 +131,11 @@
 
             <div class="col">
               <div class="card">
-              <div style="opacity: 0.5; background-color: #4CAF50; height: 200px"></div>
+              <div style="opacity: 0.5; background-color: #15bb1c; height: 200px">
+                <button type="button" class="btn btn-success-outline _btn-modal" data-toggle="modal" data-target="#exampleModal">
+                Click to read
+            </button>
+              </div>
               <div class="card-body">
     <h5 class="card-title">Job Report</h5>
     <p class="card-text">By Lailah G</p>
@@ -133,7 +145,11 @@
 
             <div class="col">
               <div class="card">
-              <div style="opacity: 0.5; background-color: #4CAF50; height: 200px"></div>
+              <div style="opacity: 0.5; background-color: #15bb1c; height: 200px">
+                <button type="button" class="btn btn-success-outline _btn-modal" data-toggle="modal" data-target="#exampleModal">
+                Click to read
+            </button>
+              </div>
               <div class="card-body">
     <h5 class="card-title">Finances Report</h5>
     <p class="card-text">By Lailah G</p>
@@ -185,6 +201,54 @@
           </div>
         </footer>
 
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title test-center" id="exampleModalLabel">PDF</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!--  -->
+  <div id="my_pdf_viewer"> <!-- div element serves as the container for our pdf viewer -->
+
+    <div id="canvas_container">  <!-- <canvas> element. We'll be rendering the pages of our PDF files inside it -->
+      
+      <canvas id="pdf_renderer"></canvas> 
+
+      <!-- we'll be rendering only one page inside the canvas. We will, however, allow users to switch to the previous page or the next page by pressing a button. Additionally, to display the current page number, and to allow users to jump to any page they desire, our interface will have an input field. -->
+      
+
+    </div>
+
+    <div id="navigation_controls">
+      <button id="go_previous">Previous</button>
+      <input id="current_page" value="1" type="number">
+      <button id="go_next">Next</button>
+    </div>
+
+    <!-- To support zoom operations, add 2 more buttons to the interface: one to zoom in & one to zoom out -->
+    <div id="zoom_controls">
+      <button id="zoom_in">+</button>
+      <button id="zoom_out">-</button>
+    </div>
+
+    
+  </div> 
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <!-- pdf.js -->
     <script src="https://unpkg.com/pdfjs-dist@2.0.489/build/pdf.min.js"></script>
@@ -193,7 +257,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>
     <script src="https://frontenddeveloping.github.io/pdfjs-dist/build/pdf.js"></script>
     <script src="https://frontenddeveloping.github.io/pdfjs-dist/build/pdf.worker.js"></script>
-
 
 <!-- font awesome -->
 <script src="https://kit.fontawesome.com/d7625ae525.js" crossorigin="anonymous"></script>
